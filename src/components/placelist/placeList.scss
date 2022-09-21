@@ -1,0 +1,111 @@
+.place-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    .place-list-container {
+        width: 100%;
+        padding: 0 15px;
+        margin-top: 30px;
+
+        @media (min-width: 768px) {
+            padding: 0 30px;
+        }
+
+        .place {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+            color: #ff5722;
+            @media (min-width: 768px) {
+                font-size: 20px;
+            }
+        }
+
+        .card-list {
+            width: 100%;
+            display: flex;
+            margin-top: 20px;
+
+            @media (max-width: 767px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            @media (min-width: 768px) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .card-item {
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+                cursor: pointer;
+                border: 3px solid transparent;
+
+                border-radius: 15px;
+                background-color: white;
+                margin-bottom: 20px;
+                padding: 15px;
+
+                @media (min-width: 768px) {
+                    margin-left: 20px;
+                }
+
+                .card-bottom {
+                    margin-top: auto;
+                }
+            }
+
+            .card-item:hover,
+            :focus {
+                border: 3px solid #039be5;
+                transition: all 0.4s ease-in-out;
+                transform: translate(0, -6px);
+            }
+
+            .pagoda-name {
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #039be5;
+            }
+
+            .pagoda-address {
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+
+            .time-wrapper {
+                margin-bottom: 10px;
+                .time {
+                    min-width: 100px;
+                    border-radius: 5px;
+                    background-color: #039be5;
+                    padding: 5px 10px;
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: white;
+                }
+            }
+
+            .contact-title {
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .contact {
+                display: flex;
+                font-size: 14px;
+            }
+
+            .contact-space {
+                margin: 0px 5px;
+            }
+        }
+    }
+}

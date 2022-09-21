@@ -4,4 +4,6 @@ export const label = {
     tiktokLabel: "Chúng Thanh Niên Phật Quang",
     chPlayLabel: "Pháp Quang",
     appStoreLabel: "Pháp Quang",
+    ctnLabel: "Điểm Sinh Hoạt Chúng Thanh Niên",
+    kungfuLabel: "Điểm Tập Võ Phật Quang Quyền",
 };

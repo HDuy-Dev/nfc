@@ -1,87 +1,31 @@
-import Slider from "react-slick";
-
+import React, { useEffect } from "react";
 import "./App.scss";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { label } from "./label";
-import { fb, youtube, tiktok, appstore, chplay, bannerArr } from "./image";
-
-const url = {
-    fb: "https://www.facebook.com/ChungThanhNienPhatTuPhatQuangTphcm",
-    yt: "https://www.youtube.com/c/SenHongPhapQuang",
-    tiktok: "https://www.tiktok.com/@chungthanhnien_phatquang",
-    chplay: "https://play.google.com/store/apps/details?id=com.pqsoft.phapquang",
-    appstore: "https://apps.apple.com/vn/app/ph%C3%A1p-quang/id1608669200",
-};
-
-const data = [
-    {
-        id: "fb",
-        label: label.fanpageLabel,
-        img: fb,
-    },
-    {
-        id: "yt",
-        label: label.ytLabel,
-        img: youtube,
-    },
-    {
-        id: "tiktok",
-        label: label.tiktokLabel,
-        img: tiktok,
-    },
-    {
-        id: "chplay",
-        label: label.chPlayLabel,
-        img: chplay,
-    },
-    {
-        id: "appstore",
-        label: label.appStoreLabel,
-        img: appstore,
-    },
-];
+import Banner from "components/banner";
+import { url, data, bannerArr } from "./config";
+import { useHistory } from "react-router-dom";
 
 function App() {
+    const history = useHistory();
+
+    useEffect(() => {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+        });
+    }, []);
+
     const openLink = (id) => {
+        if (["ctn", "kungfu"].includes(id)) {
+            history.push(url[id]);
+            return;
+        }
         window.open(url[id], "_blank");
     };
 
-    const sliderSettings = {
-        dots: true,
-        arrows: true,
-        fade: true,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 5 * 1000,
-        slidesToShow: 1,
-        swipe: true,
-        variableWidth: false,
-        mobileFirst: true,
-        verticalSwiping: false,
-        lazyLoad: "progressive",
-    };
     return (
         <div className="app-container">
-            <Slider {...sliderSettings}>
-                {bannerArr.map((item, idx) => (
-                    <div className="banner-wrapper" key={`banner-${idx}`}>
-                        <div className="banner-container">
-                            <img
-                                src={item.desktop}
-                                className="banner"
-                                alt="banner"
-                            />
-                            <img
-                                src={item.mobile}
-                                className="banner-mobile"
-                                alt="banner-mobile"
-                            />
-                        </div>
-                    </div>
-                ))}
-            </Slider>
-
+            <Banner bannerList={bannerArr} />
             <div className="container">
                 {data.map((item, idx) => (
                     <div

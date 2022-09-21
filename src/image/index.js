@@ -3,6 +3,8 @@ import youtube from "./youtube.png";
 import tiktok from "./tiktok.png";
 import appstore from "./appstore.png";
 import chplay from "./Ch play.png";
+import ctn from "./ctn_logo.jpg";
+import kungfu from "./kungfu_logo.jpg";
 import banner_mobile from "./banner-mobile.png";
 import banner_hoa_mobile from "./banner-hoa-mobile.png";
 import banner from "./banner.jpg";
@@ -23,6 +25,47 @@ import banner_presenting from "./presenting.jpg";
 import banner_lesson from "./lesson.jpg";
 import banner_meditation from "./meditaion.jpg";
 import banner_mid_autumn from "./mid_autumn.jpg";
+import kf from "./kungfu_bg.jpg";
+import kf_mb from "./kf1.PNG";
+import kf2 from "./kungfu_2.jpg";
+import kf2_mb from "./kf2.png";
+import kf3 from "./kungfu3.jpg";
+import kf3_mb from "./kf3.png";
+import kf4 from "./kungfu4.jpg";
+import kf4_mb from "./kf4.png";
+import kf5 from "./kungfu5.jpg";
+import kf5_mb from "./kf5.png";
+import kf6 from "./kungfu6.jpg";
+import kf6_mb from "./kf6.png";
+import pagoda from "./pagoda.jpg";
+import pagoda_mb from "./pagoda_mb.png";
+
+const bannerKungfu = [
+    {
+        mobile: kf_mb,
+        desktop: kf,
+    },
+    {
+        mobile: kf2_mb,
+        desktop: kf2,
+    },
+    {
+        mobile: kf3_mb,
+        desktop: kf3,
+    },
+    {
+        mobile: kf4_mb,
+        desktop: kf4,
+    },
+    {
+        mobile: kf5_mb,
+        desktop: kf5,
+    },
+    {
+        mobile: kf6_mb,
+        desktop: kf6,
+    },
+];
 
 const bannerArr = [
     // {
@@ -30,13 +73,13 @@ const bannerArr = [
     //     desktop: banner,
     // },
     {
-        mobile: banner_hoa_mobile,
-        desktop: banner_hoa,
+        mobile: pagoda_mb,
+        desktop: pagoda,
     },
-    // {
-    //     mobile: banner_inner_mobile,
-    //     desktop: banner_inner,
-    // },
+    {
+        mobile: banner_inner_mobile,
+        desktop: banner_inner,
+    },
     // {
     //     mobile: banner_lesson_mobile,
     //     desktop: banner_lesson,
@@ -61,9 +104,19 @@ const bannerArr = [
     //     mobile: banner_tutan_mb,
     //     desktop: banner_tutan,
     // },
-    {
-        mobile: banner_working_mb,
-        desktop: banner_working,
-    },
+    // {
+    //     mobile: banner_working_mb,
+    //     desktop: banner_working,
+    // },
 ];
-export { fb, youtube, tiktok, appstore, chplay, bannerArr };
+export {
+    fb,
+    youtube,
+    tiktok,
+    appstore,
+    chplay,
+    bannerArr,
+    ctn,
+    kungfu,
+    bannerKungfu,
+};
